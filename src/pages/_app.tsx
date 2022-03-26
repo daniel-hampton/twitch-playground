@@ -2,6 +2,10 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return typeof window === "undefined" ? null : <Component {...pageProps} />;
+  return (
+    <div suppressHydrationWarning className={"h-full"}>
+      {typeof window === "undefined" ? null : <Component {...pageProps} />}
+    </div>
+  );
 }
 export default MyApp;
