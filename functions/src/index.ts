@@ -7,3 +7,11 @@ import * as functions from "firebase-functions";
 //   functions.logger.info("Hello logs!", {structuredData: true});
 //   response.send("Hello from Firebase!");
 // });
+
+// export const logTimeOfDay = functions.pubsub
+//     .schedule("every 5 minutes")
+//     .onRun((context) => {
+//       functions.logger.log(new Date());
+//       // send a push notification
+//       // update date in a database.
+//     });
